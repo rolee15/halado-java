@@ -32,9 +32,9 @@ class FibonacciTest {
     @Test
     void fibRecursiveNegativeNumber() {
         assertAll(
-                () -> assertEquals(0, Fibonacci.fibRecursive(-1)),
-                () -> assertEquals(0, Fibonacci.fibRecursive(-10)),
-                () -> assertEquals(0, Fibonacci.fibRecursive(-100))
+                () -> assertThrows(IllegalArgumentException.class, () -> Fibonacci.fibRecursive(-1)),
+                () -> assertThrows(IllegalArgumentException.class, () -> Fibonacci.fibRecursive(-10)),
+                () -> assertThrows(IllegalArgumentException.class, () -> Fibonacci.fibRecursive(-100))
         );
     }
 
@@ -62,9 +62,9 @@ class FibonacciTest {
     @Test
     void fibIterativeNegativeNumber() {
         assertAll(
-                () -> assertEquals(0, Fibonacci.fibIterative(-1)),
-                () -> assertEquals(0, Fibonacci.fibIterative(-10)),
-                () -> assertEquals(0, Fibonacci.fibIterative(-100))
+                () -> assertThrows(IllegalArgumentException.class, () -> Fibonacci.fibIterative(-1)),
+                () -> assertThrows(IllegalArgumentException.class, () -> Fibonacci.fibIterative(-10)),
+                () -> assertThrows(IllegalArgumentException.class, () -> Fibonacci.fibIterative(-100))
         );
     }
 }
