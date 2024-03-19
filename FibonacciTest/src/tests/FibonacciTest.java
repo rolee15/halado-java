@@ -31,6 +31,7 @@ class FibonacciTest {
 
     @Test
     void fibRecursiveNegativeNumber() {
+
         assertAll(
                 () -> assertThrows(IllegalArgumentException.class, () -> Fibonacci.fibRecursive(-1)),
                 () -> assertThrows(IllegalArgumentException.class, () -> Fibonacci.fibRecursive(-10)),

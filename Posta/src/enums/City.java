@@ -1,26 +1,27 @@
 package enums;
 
 public enum City {
-	BUDAPEST(32685), NEW_YORK(56), GFYEUR(NEW_YORK), GYREGRVBD(4387);
+    BUDAPEST(32685),
+    NEW_YORK(56),
+    GFYEUR(NEW_YORK),
+    GYREGRVBD(4387);
 
-	private final int zipCode;
+    private final int zipCode;
 
-	City(int zipCode) {
-		this.zipCode = zipCode;
-	}
+    City(int zipCode) {
+        this.zipCode = zipCode;
+    }
 
-	City(City other) {
-		this(other.zipCode);
-	}
+    City(City other) {
+        this(other.zipCode);
+    }
 
-	public int getZipCode() {
-		return zipCode;
-	}
+    public int getZipCode() {
+        return zipCode;
+    }
 
-	@Override
-	public String toString() {
-		return "%s(%d)".formatted(
-			name(), getZipCode()
-		);
-	}
+    @Override
+    public String toString() {
+        return "%s(%d)".formatted(name(), getZipCode());
+    }
 }

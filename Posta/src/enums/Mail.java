@@ -1,21 +1,21 @@
 package enums;
 
-public class Level {
+public class Mail {
 
-    private Weekday sentDay;
+    private Weekday dispatchDay;
     private final int zipCode;
 
-    public Level(int zipCode) {
+    public Mail(int zipCode) {
         this.zipCode = zipCode;
     }
 
-    public Level(City city) {
+    public Mail(City city) {
         this.zipCode = city.getZipCode();
     }
 
-    public void setWeekday(Weekday sentDay) {
+    public void setWeekday(Weekday dispatchDay) {
 
-        this.sentDay = sentDay;
+        this.dispatchDay = dispatchDay;
     }
 
     public int getZipCode() {

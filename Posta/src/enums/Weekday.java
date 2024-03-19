@@ -1,17 +1,16 @@
-
 package enums;
 
 public enum Weekday {
 	MON("hétfő", "Monday"),
 	TUE("kedd", "Tuesday"),
 	WED("szerda", "Wednesday", "xyz"),
-	THU,
-	FRI(),
-	SAT(),
-	SUN();
+	THU("csütörtök", "Thursday"),
+	FRI("péntek", "Friday"),
+	SAT("szombat", "Saturday"),
+	SUN("vasárnap", "Sunday");
 
 	private final String[] names;
-	private static final String[] nameCodes = "hu en xyz".split(" ");
+	private static final String[] nameCodes = "hu en".split(" ");
 
 	Weekday(String... names) {
 		this.names = names;
@@ -31,7 +30,8 @@ public enum Weekday {
 
 	public String getName(String langCode) {
 		int idx = findIdx(langCode);
-		return idx == -1 ? "???" : names[idx];
+		if (idx == -1) throw new IllegalArgumentException("Invalid language code: " + langCode);
+		return names[idx];
 	}
 
 	private static int findIdx(String langCode) {

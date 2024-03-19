@@ -5,9 +5,9 @@ import java.util.List;
 
 public class Leveleslada {
 
-    private final List<Level> lada = new ArrayList<>();
+    private final List<Mail> lada = new ArrayList<>();
 
-    public void betesz(Level level) {
-        lada.add(level);
+    public void betesz(Mail mail) {
+        lada.add(mail);
     }
 }

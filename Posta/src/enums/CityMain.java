@@ -9,7 +9,5 @@ public class CityMain {
 			System.out.println(city);
 			System.out.println(city.getZipCode());
 		}
-
-//		new City();
 	}
 }
